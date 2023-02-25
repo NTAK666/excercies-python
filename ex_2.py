@@ -16,7 +16,6 @@ class Student:
         self.ly = ly
         self.dtb = (int(toan) + int(hoa) + int(ly)) / 3
 
-    # overload the constructor
     @classmethod
     def read(cls, msv, ten, tuoi, toan, hoa, ly):
         student = cls(ten, tuoi, toan, hoa, ly)
