@@ -263,6 +263,7 @@ def get_table_using_request():
                             line += 'isDown'
                     line += ','
 
+            # dirty code
             line = line[1:-1]
             line = line.replace(',,', ',')
             word = line.split(',')[7]
@@ -283,12 +284,6 @@ def get_table_using_request():
     lines.insert(0, 'Name,Price,1h%,24h%,7d%,MarketCap,Volume(24h),Circulating Supply,Last 7 Days, Up/Down\n')
     with open('assets/ex3/table.csv', 'w') as f:
         f.writelines(lines)
-
-    # with open('assets/ex3/table.csv', 'r') as f:
-    #     lines = f.readlines()
-    #     for line in lines:
-    #         line = line.replace('\n', '')
-    #         print(tabulate([line.split(',')], headers='firstrow'))
 
     # using pandas dataframe
     df = pd.read_csv('assets/ex3/table.csv')
