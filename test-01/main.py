@@ -1,7 +1,8 @@
 import random
 import sys
 import uuid
-from collections import defaultdict
+
+from pandas._libs.internals import defaultdict
 
 
 class Shape:
@@ -186,7 +187,7 @@ if __name__ == '__main__':
 	max_area = max(shapes, key=lambda x: x.area())
 	max_perimeter = max(shapes, key=lambda x: x.perimeter())
 	print(f'''
-    The shape with the largest area is {max_area.name} with area {max_area.area()}
-    The shape with the largest perimeter is {max_perimeter.name} with perimeter {max_perimeter.perimeter()}
+    The shape with the largest area is {max_area.name} x: {max_area.x} y: {max_area.y} with area {max_area.area()}
+    The shape with the largest perimeter is {max_perimeter.name} x: {max_area.x} y: {max_area.y} with perimeter {max_perimeter.perimeter()}
 		The maximum number of overlaps is {get_max_overlaps(shapes)}
 	''')
